@@ -77,6 +77,6 @@ def login():
     	
     return redirect(url_for('home'))
     	
-    
+### MAIN ###    
 if __name__ == '__main__':
     votr.run()
