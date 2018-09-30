@@ -76,6 +76,18 @@ def login():
     	flash('Username or password is incorrect please try again', 'error')
     	
     return redirect(url_for('home'))
+
+@votr.route('/logout')
+def logout():
+	# Check if a user is logged-in
+    if 'user' in session:
+        # Then remove them from the session
+        session.pop('user')
+
+        flash('We hope to see you again!')
+
+    return redirect(url_for('home'))
+
     	
 ### MAIN ###    
 if __name__ == '__main__':
