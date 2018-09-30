@@ -42,3 +42,10 @@ class Polls(Base):
     def __repr__(self):
     	# a user friendly way to view our objects in the terminal
         return self.option.name
+
+# Model to store user details        
+class Users(Base):
+	email = db.Column(db.String(100), unique=True)
+	username = db.Column(db.String(50), unique=True)
+	password = db.Column(db.String(200))
+	
